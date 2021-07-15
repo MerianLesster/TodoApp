@@ -27,6 +27,7 @@ export class TodoDetailsComponent implements OnInit {
       this.service.deleteTodoDetail(id).subscribe(
         (res) => {
           this.service.refreshList();
+          this.service.formData = new TodoDetail; // Clear prefilled form
           this.toastr.success('Todo Deleted Successfully', 'Successful');
         },
         (err) => {

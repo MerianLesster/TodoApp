@@ -17,18 +17,6 @@ export class TodoDetailsFormComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  // var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(form)
-    .forEach(function (form) {
-          if (!form.checkValidity()) {
-            return
-          }
-
-          form.classList.add('was-validated');
-    })
     if(this.service.formData.todoDetailId == 0){
       this.addTodoRecord(form);
     } else{

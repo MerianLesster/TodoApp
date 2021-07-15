@@ -13,18 +13,22 @@ export class TodoDetailService {
   formData:TodoDetail = new TodoDetail();
   list: TodoDetail[];
 
+  // Add new todos
   postTodoDetail(){
     return this.http.post(this.BASE_URL, this.formData);
   }
 
+  // Update existing todos
   putTodoDetail(){
     return this.http.put(`${this.BASE_URL}/${this.formData.todoDetailId}`, this.formData);
   }
 
+  // Delete existing todos
   deleteTodoDetail(id: number){
     return this.http.delete(`${this.BASE_URL}/${id}`);
   }
 
+  // Get all todos
   refreshList(){
     this.http.get(this.BASE_URL)
     .toPromise()

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>todoAPI</name>
+    </assembly>
+    <members>
+        <member name="T:todoAPI.Controllers.TodoDetailController">
+            <summary>
+            Todo Controller responsible for GET/POST/PUT/DELETE for managing todos
+            </summary>
+        </member>
+        <member name="M:todoAPI.Controllers.TodoDetailController.GetTodoDetails">
+            <summary>
+            This GET method returns all the todos
+            </summary>
+        </member>
+        <member name="M:todoAPI.Controllers.TodoDetailController.GetTodoDetail(System.Int32)">
+            <summary>
+            This GET method returns the todo with the specified id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:todoAPI.Controllers.TodoDetailController.PutTodoDetail(System.Int32,todoAPI.Models.TodoDetail)">
+            <summary>
+            This PUT method updates the existing todo with the specified id
+            </summary>
+            <param name="id"></param>
+            <param name="todoDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:todoAPI.Controllers.TodoDetailController.PostTodoDetail(todoAPI.Models.TodoDetail)">
+            <summary>
+            This POST method adds a new todo
+            </summary>
+            <param name="todoDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:todoAPI.Controllers.TodoDetailController.DeleteTodoDetail(System.Int32)">
+            <summary>
+            This DELETE method deletes the existing todo with the specified id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:todoAPI.Models.TodoDetail.TodoDetailId">
+            <summary>
+            Todo Id
+            </summary>
+        </member>
+        <member name="P:todoAPI.Models.TodoDetail.TaskName">
+            <summary>
+            Todo task name
+            </summary>
+        </member>
+        <member name="P:todoAPI.Models.TodoDetail.Priority">
+            <summary>
+            Todo priority
+            </summary>
+        </member>
+        <member name="P:todoAPI.Models.TodoDetail.DueDate">
+            <summary>
+            Todo duedate
+            </summary>
+        </member>
+    </members>
+</doc>

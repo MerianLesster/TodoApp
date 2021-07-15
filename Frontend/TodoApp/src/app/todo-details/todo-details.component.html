@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1 class="display-4 text-center">Todo App</h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-todo-details-form></app-todo-details-form>
+  </div>
+  <div class="col-md-6">
+      <table class="table">
+          <thead class="thread-light">
+              <tr>
+                  <th>Task Name</th>
+                  <th>Priority</th>
+                  <th>Due Date</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let todo of service.list">
+                  <td (click)="prefillForm(todo)">{{todo.taskName}}</td>
+                  <td (click)="prefillForm(todo)">{{todo.priority}}</td>
+                  <td (click)="prefillForm(todo)">{{todo.dueDate}}</td>
+                  <td>
+                      <i class="far fa-trash-alt fa-lg text-danger" (click)="deleteFormRecord(todo.todoDetailId)"></i>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
